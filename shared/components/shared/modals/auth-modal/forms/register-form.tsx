@@ -22,6 +22,7 @@ export const RegisterForm: React.FC<Props> = ({ onClose, onClickLogin }) => {
       fullName: '',
       password: '',
       confirmPassword: '',
+      verified: new Date(),
     },
   });
 
@@ -32,14 +33,14 @@ export const RegisterForm: React.FC<Props> = ({ onClose, onClickLogin }) => {
         fullName: data.fullName,
         password: data.password,
       });
-
-      toast.error('Регистрация успешна 📝. Подтвердите свою почту', {
+      // toast.error('Регистрация успешна 📝. Подтвердите свою почту', {
+      toast.error('Регистрация успешна 📝. Можете войти в акккаунт', {
         icon: '✅',
       });
 
       onClose?.();
     } catch (error) {
-      return toast.error('Неверный E-Mail или пароль', {
+      return toast.error('Неверный E-Mail или пароль, может пользователь уже существует', {
         icon: '❌',
       });
     }

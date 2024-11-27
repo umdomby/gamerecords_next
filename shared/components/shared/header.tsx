@@ -53,17 +53,17 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
           <div className="flex items-center gap-4">
             <Image src="/logo.png" alt="Logo" width={35} height={35} />
             <div>
-              <h1 className="text-2xl uppercase font-black">Next Pizza</h1>
-              <p className="text-sm text-gray-400 leading-3">вкусней уже некуда</p>
+              <h1 className="text-2xl uppercase font-black">GAME RECORDS</h1>
+              <p className="text-sm text-gray-400 leading-3">рекорды одиночных заездов</p>
             </div>
           </div>
         </Link>
 
-        {hasSearch && (
-          <div className="mx-10 flex-1">
-            <SearchInput />
-          </div>
-        )}
+        {/*{hasSearch && (*/}
+        {/*  <div className="mx-10 flex-1">*/}
+        {/*    <SearchInput />*/}
+        {/*  </div>*/}
+        {/*)}*/}
 
         {/* Правая часть */}
         <div className="flex items-center gap-3">
@@ -71,7 +71,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
 
           <ProfileButton onClickSignIn={() => setOpenAuthModal(true)} />
 
-          {hasCart && <CartButton />}
+          {/*{hasCart && <CartButton />}*/}
         </div>
       </Container>
     </header>
